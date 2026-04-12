@@ -294,16 +294,7 @@ function HeroText() {
         {' '}<span style={{ whiteSpace: 'nowrap' }}>are hard to hold alone.</span>
       </h1>
 
-      <p style={{
-        fontFamily: 'var(--font-source-serif), Georgia, serif',
-        fontSize: '1rem', lineHeight: 1.65,
-        color: 'rgba(250,247,242,0.62)',
-        marginBottom: '1.75rem', maxWidth: '44ch', marginInline: 'auto',
-      }}>
-        A quiet plush friend your child can turn to — anytime, screen-free, on-device.
-      </p>
-
-      <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+      <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center', marginTop: '1.75rem' }}>
         <Link href="/promise" style={{
           fontFamily: 'var(--font-source-serif), Georgia, serif',
           fontSize: '0.875rem', letterSpacing: '0.03em',
@@ -364,11 +355,11 @@ export function GlobeHero() {
         {/* Curved promise tape */}
         <PromiseTape />
 
-        {/* Globe — pulled up to overlap the tape; tape runs behind it */}
+        {/* Globe — stacked below tape */}
         <div style={{
           position: 'relative',
           width: '100%', maxWidth: 'min(60vw, 588px)',
-          marginTop: 'calc(-80px - min(15vw, 147px))',
+          marginTop: '1.5rem',
         }}>
           <div style={{
             position: 'absolute', inset: '-6%', borderRadius: '50%',

@@ -298,11 +298,20 @@ export default function HomePage() {
 
             <p style={{
               fontFamily: 'var(--font-source-serif), Georgia, serif',
-              fontStyle: 'italic',
               fontSize: 'clamp(1.05rem, 1.8vw, 1.2rem)',
-              lineHeight: 1.65, color: '#5C5C5C', marginBottom: '2.75rem',
+              lineHeight: 1.65, color: '#5C5C5C', marginBottom: '1rem',
               maxWidth: '38ch',
               animation: 'hp-fade-up 0.7s 0.35s both ease-out',
+            }}>
+              A quiet plush friend your child can turn to — anytime, screen-free, on-device.
+            </p>
+            <p style={{
+              fontFamily: 'var(--font-source-serif), Georgia, serif',
+              fontStyle: 'italic',
+              fontSize: 'clamp(0.9rem, 1.5vw, 1rem)',
+              lineHeight: 1.65, color: '#8C8C8C', marginBottom: '2.75rem',
+              maxWidth: '38ch',
+              animation: 'hp-fade-up 0.7s 0.4s both ease-out',
             }}>
               Screen-free. Voice-first. Voice data never leaves the plush.
             </p>
