@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+/* ─── Design tokens ──────────────────────────────────────────── */
+@theme {
+  --color-ink:          #1A1A1A;
+  --color-ink-muted:    #5C5C5C;
+  --color-paper:        #FAF7F2;
+  --color-paper-deep:   #F0E8DA;
+  --color-forest:       #2C4A3E;
+  --color-forest-pale:  #E8EFE9;
+  --color-moss:         #7A9E8E;
+  --color-rule:         #D9D2C5;
+  --font-display: var(--font-fraunces);
+  --font-body:    var(--font-source-serif);
+}
+
+/* ─── Base ───────────────────────────────────────────────────── */
+html {
+  background-color: #FAF7F2;
+  color: #1A1A1A;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+/* Subtle paper grain */
+html::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)'/%3E%3C/svg%3E");
+  opacity: 0.038;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+body {
+  font-family: var(--font-source-serif), Georgia, 'Times New Roman', serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  background-color: #FAF7F2;
+  color: #1A1A1A;
+}
+
+/* ─── Shared keyframes ───────────────────────────────────────── */
+@keyframes prose-enter {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes rule-grow {
+  from { transform: scaleX(0); transform-origin: left; }
+  to   { transform: scaleX(1); }
+}
+
+/* ─── Prose container (MDX pages) ────────────────────────────── */
+.prose-lp {
+  max-width: 68ch;
+  margin-inline: auto;
+  padding: 5rem 1.5rem 8rem;
+  animation: prose-enter 0.65s 0.05s both ease-out;
+}
+
+.prose-lp h1 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: clamp(2.6rem, 5.5vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: #1A1A1A;
+  margin-bottom: 0.25rem;
+  font-optical-sizing: auto;
+}
+
+/* Short forest-green accent rule directly after page title */
+.prose-lp h1 + hr {
+  border: none;
+  border-top: 2.5px solid #2C4A3E;
+  margin: 1.25rem 0 2.75rem;
+  width: 2.5rem;
+  animation: rule-grow 0.75s 0.5s both ease-out;
+}
+
+.prose-lp h2 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: clamp(1.35rem, 2.8vw, 1.7rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: #1A1A1A;
+  margin-top: 3.5rem;
+  margin-bottom: 0.875rem;
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
+}
+
+.prose-lp h3 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-lp p {
+  font-size: 1.075rem;
+  line-height: 1.72;
+  color: #1A1A1A;
+  margin-bottom: 1.4rem;
+}
+
+.prose-lp em   { font-style: italic; }
+.prose-lp strong { font-weight: 600; }
+
+.prose-lp a {
+  color: #2C4A3E;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.prose-lp a:hover { text-decoration-thickness: 2px; }
+
+.prose-lp hr {
+  border: none;
+  border-top: 1px solid #D9D2C5;
+  margin: 3.5rem 0;
+}
+
+.prose-lp blockquote {
+  border-left: 2.5px solid #2C4A3E;
+  margin: 2.5rem 0;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  color: #3A3A3A;
+  font-style: italic;
+}
+
+.prose-lp ul,
+.prose-lp ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.prose-lp li {
+  margin-bottom: 0.5rem;
+  font-size: 1.075rem;
+  line-height: 1.65;
+}
+
+/* ─── Utility ────────────────────────────────────────────────── */
+.label-sm {
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-size: 0.69rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #5C5C5C;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+:focus-visible {
+  outline: 2px solid #2C4A3E;
+  outline-offset: 3px;
+}
