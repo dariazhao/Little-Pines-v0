@@ -89,10 +89,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 listStyle: 'none', margin: 0, padding: 0, flexWrap: 'wrap',
               }}>
                 {([
-                  ['/',         'Home'    ],
-                  ['/promise',  'Promise' ],
-                  ['/research', 'Research'],
-                  ['/studio',   'Studio'  ],
+                  ['/',         'Home'        ],
+                  ['/promise',  'The Promise' ],
+                  ['/research', 'Our Research'],
+                  ['/studio',   'Our Studio'  ],
                 ] as const).map(([href, label]) => (
                   <li key={href}>
                     <Link href={href} className="lp-nav-link" style={{

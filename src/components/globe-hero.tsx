@@ -251,7 +251,7 @@ function HeroText() {
         fontSize: '0.67rem', letterSpacing: '0.18em', textTransform: 'uppercase',
         color: 'rgba(250,247,242,0.5)', display: 'block', marginBottom: '1.5rem',
       }}>
-        Emotional Literacy Coach · For ages 3–7
+        A Montessori- and Waldorf-inspired toy studio · Est. 2026
       </span>
 
       <h1 style={{
