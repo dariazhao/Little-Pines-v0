@@ -29,7 +29,7 @@ export default function StudioPage() {
             fontSize: '0.67rem', letterSpacing: '0.18em', textTransform: 'uppercase',
             color: 'rgba(250,247,242,0.45)', display: 'block', marginBottom: '1.25rem',
           }}>
-            Our Studio
+            The Studio
           </span>
           <h1 style={{
             fontFamily: 'var(--font-fraunces), Georgia, serif',

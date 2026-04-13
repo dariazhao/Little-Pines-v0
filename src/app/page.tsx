@@ -230,7 +230,7 @@ export default function HomePage() {
                 textDecoration: 'none', borderBottom: '1px solid #D9D2C5',
                 paddingBottom: '2px', display: 'inline-block',
               }}>
-                Our Studio →
+                The Studio →
               </Link>
             </div>
           </div>
@@ -460,7 +460,7 @@ export default function HomePage() {
               textDecoration: 'none', borderBottom: '1.5px solid #2C4A3E',
               paddingBottom: '2px', display: 'inline-block',
             }}>
-              More about the studio →
+              More about the Studio →
             </Link>
           </div>
 
@@ -477,7 +477,7 @@ export default function HomePage() {
       {/* ════════════════════════════════════════════════════════
           EARLY ACCESS — footer CTA
       ════════════════════════════════════════════════════════ */}
-      <section style={{ background: '#2C4A3E', padding: '6.5rem 2rem' }}>
+      <section id="early-access" style={{ background: '#2C4A3E', padding: '6.5rem 2rem' }}>
         <div style={{ maxWidth: '44ch', marginInline: 'auto', textAlign: 'center' }}>
           <span style={{
             fontFamily: 'var(--font-source-serif), Georgia, serif',

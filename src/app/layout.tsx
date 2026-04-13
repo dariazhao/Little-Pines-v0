@@ -43,6 +43,14 @@ const LAYOUT_CSS = `
   }
   .lp-wordmark:hover { opacity: 0.75; }
   .lp-footer-email:hover { border-bottom-color: #D9D2C5 !important; }
+  .lp-early-access {
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+  .lp-early-access:hover {
+    background: #2C4A3E !important;
+    border-color: #2C4A3E !important;
+    color: #FAF7F2 !important;
+  }
 `
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -87,12 +95,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <ul style={{
                 display: 'flex', gap: 'clamp(1rem, 3vw, 2rem)',
                 listStyle: 'none', margin: 0, padding: 0, flexWrap: 'wrap',
+                alignItems: 'center',
               }}>
                 {([
                   ['/',         'Home'        ],
                   ['/promise',  'The Promise' ],
                   ['/research', 'Our Research'],
-                  ['/studio',   'Our Studio'  ],
+                  ['/studio',   'The Studio'  ],
                 ] as const).map(([href, label]) => (
                   <li key={href}>
                     <Link href={href} className="lp-nav-link" style={{
@@ -105,6 +114,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <Link href="/#early-access" className="lp-early-access" style={{
+                    fontFamily: 'var(--font-source-serif), Georgia, serif',
+                    fontSize: '0.78rem', letterSpacing: '0.07em', textTransform: 'uppercase',
+                    color: '#2C4A3E', textDecoration: 'none',
+                    border: '1.5px solid rgba(44,74,62,0.45)',
+                    borderRadius: '100px',
+                    padding: '0.3rem 0.9rem',
+                    display: 'inline-block',
+                    whiteSpace: 'nowrap',
+                  }}>
+                    Early Access
+                  </Link>
+                </li>
               </ul>
             </nav>
           </div>
